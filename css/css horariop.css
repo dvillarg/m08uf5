@@ -2,24 +2,18 @@
 h1, p {
     text-align: center;
 }
-tr:hover {background-color: turquoise;}
-tr:nth-child(even){background-color: #918989}
-
-img.logo {
-    width: 100px; 
-    height: auto; 
-}
-
+table {
+    border-collapse: collapse;
+  }
+  
+  table, th, td {
+    border: 1px solid #ddd; 
+  }
 
 table {
     border-collapse: collapse;
     width: 80%;
     margin: auto; 
-}
-
-th, td {
-    border: 1px solid #ddd;
-    padding: 10px;
 }
 
 
@@ -33,29 +27,3 @@ td {
     text-align: center;
 }
 
-
-#modul1 {
-    font-family: 'Arial', sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: underline;
-    color: #3366cc;
-}
-
-#modul2 {
-    font-family: 'Times New Roman', serif;
-    font-size: 18px;
-    font-weight: normal;
-    text-decoration: italic;
-    color: #ff9900;
-}
-
-
-.modul-link {
-    color: #009933;
-    text-decoration: none;
-}
-
-.modul-link:hover {
-    text-decoration: underline;
-}
