@@ -7,7 +7,7 @@ table {
   }
   
   table, th, td {
-    border: 1px solid #ddd; 
+    border: 1px solid rgb(128, 128, 128); 
   }
 
 table {
@@ -27,3 +27,12 @@ td {
     text-align: center;
 }
 
+
+
+td {
+    font-family: 'Times New Roman', serif;
+    font-size: 18px;
+    font-weight: normal;
+    text-decoration: italic;
+    background-color: #ddd;
+}
