@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+
+  form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f4f4f4;
+  }
+
+  label {
+    display: block;
+    margin: 10px 0;
+  }
+
+  input, select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-top: 4px;
+    margin-bottom: 10px;
+  }
+
+ 
+
+
+  button:hover {
+    background-color: #45a049;
+  }
+
+
+body {
+  font-family: Arial, sans-serif; 
+}
+
+
+legend {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #ff0000; 
+}
+
+
+legend.nacionalidad {
+  color: #ff0000;
+}
+
+legend.idiomas {
+  color: #ff0000; 
+}
+
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+
+input, select, button {
+  margin-bottom: 10px;
+}
+
+button[type="submit"] {
+  background-color: #3366cc; 
+  color: #fff; 
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #004080; 
+}

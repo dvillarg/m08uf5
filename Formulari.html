@@ -4,44 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulari</title>
-  <link rel="stylesheet" href="css/CSS formulario.css">
-</head>                                                     Formulari David Villar </pre> </h1>
+  <link rel="stylesheet" href="css/CSS_formulario.css">
+</head>
 <body>
+  <h1>Curriculum</h1>
   <form>
     <fieldset>
-      <legend>Formación Básica</legend>
-      <label for="estudios-secundarios">Estudios Secundarios:</label>
-      <select id="estudios-secundarios" name="estudios-secundarios">
+      <legend>Dades Personals</legend>
+      <label for="nombre">Nom:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="edad">Edat:</label>
+      <input type="number" id="edad" name="edad" min="0" required>
+    </fieldset>
+    <fieldset>
+      <legend class="formacion">Formación Bàsica</legend>
+      <label for="estudios-secundarios">Estudis Secundaris:</label>
+      <select id="estudios-secundarios" name="estudios-secundarios" required>
         <option value="ESO">ESO</option>
-        <option value="GM">GM</option>
-        <option value="GS">GS</option>
-        <option value="Universidad">Universidad</option>
+        <option value="GRAU MITJÀ">Grau mitjà</option>
+        <option value="GRAU SUPERIOR">Grau superior</option>
+        <option value="Universidad">Universitat</option>
       </select>
     </fieldset>
     <fieldset>
-      <legend class="nacionalidad">Nacionalidad</legend>
-      <label for="nacionalidad">Nacionalidad:</label>
+      <legend class="nacionalidad">Nacionalitat:</legend>
       <input type="text" id="nacionalidad" name="nacionalidad" required>
     </fieldset>
     <fieldset>
-      <legend class="idiomas">Idiomas</legend>
-      <label for="idiomas">Idiomas:</label>
+      <legend class="idiomas">Idiomes:</legend>
       <input type="text" id="idiomas" name="idiomas" required>
     </fieldset>
-    <label for="altura">Altura:</label>
+    <label for="altura">Alçada:</label>
     <input type="number" id="altura" name="altura" value="170" min="0" max="300" required>
     <label for="email">Email:</label>
-    <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required> <br> 
+    <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required><br>
     <button type="submit">Enviar</button><br>
-    <fieldset>
-        <legend>Preferències</legend>
-        <p>Voldries rebre informació comercial?</p>
-        <input type="radio" id="si" name="informacio_comercial" value="Si">
-        <label for="si">Sí</label>
-        <input type="radio" id="no" name="informacio_comercial" value="No">
-        <label for="no">No</label>
-      </fieldset>
   </form>
-
 </body>
 </html>
