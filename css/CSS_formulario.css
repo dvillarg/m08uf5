@@ -17,22 +17,21 @@ form {
 }
 
 fieldset {
-  border: none; /* Eliminamos el borde */
+  border: none; 
   border-radius: 8px;
   margin-bottom: 20px;
-  background-color: #1e90ff; /* Color de fondo del fieldset */
-  color: black; /* Color del texto dentro del fieldset */
-  position: relative; /* Posición relativa para alinear legend */
+  background-color: #1e90ff; 
+  color: black; 
 }
 
 legend {
   font-style: italic;
-  position: absolute; /* Posición absoluta con respecto al fieldset */
-  top: -20px; /* Ajuste de posición hacia arriba */
+  position: absolute; 
+  top: -20px;  
 }
 
 legend.formacion {
-  color: #1e90ff; /* Blau clar */
+  color: #1e90ff; 
 }
 
 legend.nacionalidad {
