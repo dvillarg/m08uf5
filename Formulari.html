@@ -1,70 +1,78 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilos.css">
   <title>Formulari</title>
-  <link rel="stylesheet" href="css/CSS_formulario.css">
-  <style>
-  </style>
 </head>
+
 <body>
-  <h1>Curriculum</h1>
-  <form>
-    <fieldset>
-      <legend>Dades Personals</legend>
-      <label for="nombre">Nom:</label>
-      <input type="text" id="nombre" name="nombre" required>
+  <form action="processar.php" method="post">
+    <fieldset class="formacion">
+      <legend class="formacion">Formación Básica</legend>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" placeholder="David Villar" required>
 
-      <label for="edad">Edat:</label>
-      <input type="number" id="edad" name="edad" min="0" required>
-
-      <label for="altura">Alçada:</label>
-      <input type="number" id="altura" name="altura" value="170" min="0" max="300" required>
+      <label for="altura">Altura (cm):</label>
+      <input type="number" id="altura" name="altura" min="0" max="300" value="170" required>
 
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+      <input type="email" id="email" name="email" placeholder="ejemplo@ejemplo.com" required>
+
+      <label for="fecha">Fecha de Nacimiento:</label>
+      <input type="date" id="fecha" name="fecha" required>
     </fieldset>
 
-    <fieldset class="nacionalidad-options">
-      <legend class="nacionalidad">Nacionalitat:</legend>
-      <label>
-        <input type="radio" name="nacionalidad" value="espanol-comunitario"> Español Comunitario (UE)
-      </label>
-      <label>
-        <input type="radio" name="nacionalidad" value="no-comunitario"> No comunitario
-      </label>
+    <fieldset class="nacionalidad">
+      <legend class="nacionalidad">Nacionalidad</legend>
+      <div class="checkbox-group">
+        <label for="espanol">Español:</label>
+        <input type="radio" id="espanol" name="nacionalidad" value="español" required>
+
+        <label for="comunitario_ue">Comunitario UE:</label>
+        <input type="radio" id="comunitario_ue" name="nacionalidad" value="comunitario_ue" required>
+
+        <label for="no_comunitario">No comunitario:</label>
+        <input type="radio" id="no_comunitario" name="nacionalidad" value="no_comunitario" required>
+      </div>
     </fieldset>
 
-    <fieldset class="estudios-fieldset">
-      <legend class="formacion">Formación Bàsica</legend>
-      <label for="estudios-secundarios">Estudis Secundaris:</label>
-      <select id="estudios-secundarios" name="estudios-secundarios" required>
+    <fieldset class="estudios">
+      <legend class="estudios">Estudios</legend>
+      <label for="nivel_estudios">Nivel de estudios:</label>
+      <select id="nivel_estudios" name="nivel_estudios" required>
         <option value="ESO">ESO</option>
-        <option value="GRAU MITJÀ">Grau mitjà</option>
-        <option value="GRAU SUPERIOR">Grau superior</option>
-        <option value="Universidad">Universitat</option>
+        <option value="GM">GM</option>
+        <option value="GS">GS</option>
+        <option value="Universidad">Universidad</option>
       </select>
     </fieldset>
 
-    <fieldset class="idiomas-checkbox">
-      <legend class="idiomas">Idiomes:</legend>
-      <label>
-        <input type="checkbox" name="idioma" value="catalan"> Catalán
-      </label>
-      <label>
-        <input type="checkbox" name="idioma" value="castellano"> Castellano
-      </label>
-      <label>
-        <input type="checkbox" name="idioma" value="ingles"> Inglés
-      </label>
-      <label>
-        <input type="checkbox" name="idioma" value="aleman"> Alemán
-      </label>
+    <fieldset class="idiomas">
+      <legend class="idiomas">Idiomas</legend>
+      <div class="checkbox-group">
+        <label for="catalan">Catalán:</label>
+        <input type="checkbox" id="catalan" name="idiomas[]" value="catalan">
+
+        <label for="castellano">Castellano:</label>
+        <input type="checkbox" id="castellano" name="idiomas[]" value="castellano">
+
+        <label for="ingles">Inglés:</label>
+        <input type="checkbox" id="ingles" name="idiomas[]" value="ingles">
+      </div>
     </fieldset>
 
     <button type="submit">Enviar</button>
-    <button type="button">Cancelar</button>
+    <button type="button" class="cancelar" onclick="cancelarFormulario()">Cancelar</button>
+
+    <script>
+      function cancelarFormulario() {
+        alert("Formulario cancelado");
+      }
+    </script>
   </form>
 </body>
+
 </html>
