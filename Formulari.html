@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulari</title>
   <link rel="stylesheet" href="css/CSS_formulario.css">
+  <style>
+  </style>
 </head>
 <body>
   <h1>Curriculum</h1>
@@ -16,8 +18,25 @@
 
       <label for="edad">Edat:</label>
       <input type="number" id="edad" name="edad" min="0" required>
+
+      <label for="altura">Alçada:</label>
+      <input type="number" id="altura" name="altura" value="170" min="0" max="300" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
     </fieldset>
-    <fieldset>
+
+    <fieldset class="nacionalidad-options">
+      <legend class="nacionalidad">Nacionalitat:</legend>
+      <label>
+        <input type="radio" name="nacionalidad" value="espanol-comunitario"> Español Comunitario (UE)
+      </label>
+      <label>
+        <input type="radio" name="nacionalidad" value="no-comunitario"> No comunitario
+      </label>
+    </fieldset>
+
+    <fieldset class="estudios-fieldset">
       <legend class="formacion">Formación Bàsica</legend>
       <label for="estudios-secundarios">Estudis Secundaris:</label>
       <select id="estudios-secundarios" name="estudios-secundarios" required>
@@ -27,19 +46,25 @@
         <option value="Universidad">Universitat</option>
       </select>
     </fieldset>
-    <fieldset>
-      <legend class="nacionalidad">Nacionalitat:</legend>
-      <input type="text" id="nacionalidad" name="nacionalidad" required>
-    </fieldset>
-    <fieldset>
+
+    <fieldset class="idiomas-checkbox">
       <legend class="idiomas">Idiomes:</legend>
-      <input type="text" id="idiomas" name="idiomas" required>
+      <label>
+        <input type="checkbox" name="idioma" value="catalan"> Catalán
+      </label>
+      <label>
+        <input type="checkbox" name="idioma" value="castellano"> Castellano
+      </label>
+      <label>
+        <input type="checkbox" name="idioma" value="ingles"> Inglés
+      </label>
+      <label>
+        <input type="checkbox" name="idioma" value="aleman"> Alemán
+      </label>
     </fieldset>
-    <label for="altura">Alçada:</label>
-    <input type="number" id="altura" name="altura" value="170" min="0" max="300" required>
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required><br>
-    <button type="submit">Enviar</button><br>
+
+    <button type="submit">Enviar</button>
+    <button type="button">Cancelar</button>
   </form>
 </body>
 </html>
